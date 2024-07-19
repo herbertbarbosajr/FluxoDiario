@@ -6,7 +6,7 @@ services:
     volumes:
       - ./AppData/Volumes/mssql:/var/opt/mssql/data
     environment:
-      SA_PASSWORD: "CashFlow@2024"
+      SA_PASSWORD: "admin@123"
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Developer"
     ports:
@@ -21,7 +21,7 @@ services:
       - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: admin
-      RABBITMQ_DEFAULT_PASS: CashFlow@2024
+      RABBITMQ_DEFAULT_PASS: admin@123
       RABBITMQ_DEFAULT_VHOST: /
 
   fluxo_diario_api:
@@ -39,10 +39,10 @@ services:
       - shared-volume:/app/relatorios
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      DEFAULT_CONNECTION_STRING: "Server=sqlserver,1433;Database=FluxoDiario;User Id=sa;Password=CashFlow@2024;TrustServerCertificate=True"
+      DEFAULT_CONNECTION_STRING: "Server=SQLEXPRESS01; Database=FluxoDiarioDB; Trusted_Connection=True; MultipleActiveResultSets=True;TrustServerCertificate=true"
       RABBITMQ_HOSTNAME: "rabbitmq"
       RABBITMQ_USER: "admin"
-      RABBITMQ_PASSWORD: "CashFlow@2024"
+      RABBITMQ_PASSWORD: "admin@123"
       RELATORIOS_DIRECTORY: "/app/relatorios"
 
   relatorios_worker:
@@ -57,10 +57,10 @@ services:
       - shared-volume:/app/relatorios
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      DEFAULT_CONNECTION_STRING: "Server=sqlserver,1433;Database=FluxoDiario;User Id=sa;Password=CashFlow@2024;TrustServerCertificate=True"
+      DEFAULT_CONNECTION_STRING: "Server=SQLEXPRESS01; Database=FluxoDiarioDB; Trusted_Connection=True; MultipleActiveResultSets=True;TrustServerCertificate=true"
       RABBITMQ_HOSTNAME: "rabbitmq"
       RABBITMQ_USER: "admin"
-      RABBITMQ_PASSWORD: "CashFlow@2024"
+      RABBITMQ_PASSWORD: "admin@123"
       RELATORIOS_DIRECTORY: "/app/relatorios"
 volumes:
   shared-volume:
