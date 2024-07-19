@@ -51,7 +51,8 @@ Ferramenta para realizar o Mock (processo de "imitar" implementações reais) de
 
 ## <a name="arquitetura"></a> Arquitetura
 
-
+### Desenho geral da Solução
+![image](./Docs/Arquitetura/Arquitetura.png)
 
 ### Planejamento do projeto
 A aplicação foi projetada de forma robusta para habilitar a aplicação a escalar, tanto na infraestrutura quanto em novas funcionalidades, de forma consistente, confiável e testável.
