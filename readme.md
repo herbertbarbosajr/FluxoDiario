@@ -77,8 +77,7 @@ Vale mencionar que a arquitetura foi planejada visando demonstrar o exemplo de u
 
 Caso o sistema fosse planejado como um contrato único e rápido, sem grandes chances de expansão, a arquitetura seria consideravelmente mais simples, implementando algo como três camadas + Pub-Sub para realizar um fluxo parecido com o envio da mensagem de criação de relatório. Ir além disso numa situação como essa seria contraprodutivo.
 
-### Estrutura do projeto
-![image](./Docs/Arquitetura/StructuredProjeto.jpg)
+
 
 #### Entry Layer
 ![image](./Docs/Arquitetura/StructuredEntryLayer.jpg)
