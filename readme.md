@@ -97,11 +97,7 @@ Caso o sistema fosse planejado como um contrato único e rápido, sem grandes ch
 #### Shared Layer
 ![image](./Docs/Arquitetura/StructuredSharedLayer.jpg)
 
-### Mapa de Contexto
-![image](./Docs/Contextos/Context_Mapp.jpg)
 
-#### FluxoDiario Context
-![image](./Docs/Contextos/FluxoDiario.jpg)
 
 #### Relatorios Context
 ![image](./Docs/Contextos/Relatorios.jpg)
